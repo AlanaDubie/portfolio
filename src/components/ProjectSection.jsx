@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 
 import { PageTemplate } from "../pages/project_pages/PageTemplate";
 import { TropicalPlantsPage } from "../pages/project_pages/TropicalPlantsPage";
-import {AsteroidGenPage} from "../pages/project_pages/AsteroidGenPage";
+import { AsteroidGenPage } from "../pages/project_pages/AsteroidGenPage";
+import { AsteroidSpawnerPage } from "../pages/project_pages/AsteroidSpawnerPage";
 import { MacroMossPage } from "../pages/project_pages/MacroMossPage";
+import { AutoMaterialPage } from "../pages/project_pages/AutoMaterialPage";
+import { ElectricShiftPage } from "../pages/project_pages/ElectricShift";
+import { BuilderBeaversPage } from "../pages/project_pages/BuilderBeaversPage";
+import { HouseLightingPage } from "../pages/project_pages/HouseLightingPage";
+import { OutsideDinePage } from "../pages/project_pages/OutsideDinePage";
+import { UnderwaterScenePage } from "../pages/project_pages/UnderwaterScenePage";
 
 // --- Project data ---
 const projects = [
@@ -37,7 +44,7 @@ const projects = [
         description: "Maya Python Script",
         image: "src/assets/projects/auto_material_tool/card_img_mat_tool.png",
         tags: ["Coding"],
-        detailComponent: <div className="p-8 text-white">Auto-Material Tool detail coming soon.</div>
+        detailComponent: <AutoMaterialPage />
     },
     {
         id: 5, 
@@ -45,7 +52,7 @@ const projects = [
         description: "Unity Space Game Level",
         image: "src/assets/projects/asteroid/card_img_asteroid_map.jpeg",
         tags: ["Coding"],
-        detailComponent: <div className="p-8 text-white">Space Game – Asteroid Spawner Level detail coming soon.</div>
+        detailComponent: <AsteroidSpawnerPage />
     },
     {
         id: 6, 
@@ -53,7 +60,7 @@ const projects = [
         description: "VR Game",
         image: "src/assets/projects/electric_shift/card_img_electric_shift.png",
         tags: ["Coding"],
-        detailComponent: <div className="p-8 text-white">Electric Shift detail coming soon.</div>
+        detailComponent: <ElectricShiftPage />
     },
     {
         id: 7, 
@@ -61,7 +68,7 @@ const projects = [
         description: "2D Tower Defense Game",
         image: "src/assets/projects/builder_beavers/card_img_builder_beavers.png",
         tags: ["Coding"],
-        detailComponent: <div className="p-8 text-white">Builder Beavers detail coming soon.</div>
+        detailComponent: <BuilderBeaversPage /> 
     },
     {
         id: 8, 
@@ -69,7 +76,7 @@ const projects = [
         description: "3D Lighting Studies",
         image: "src/assets/projects/house_lighting/card_img_house_light.png",
         tags: ["3D"],
-        detailComponent: <div className="p-8 text-white">House Lighting detail coming soon.</div>
+        detailComponent: <HouseLightingPage />
     },
     {
         id: 9, 
@@ -77,7 +84,7 @@ const projects = [
         description: "3D Lighting Studies",
         image: "src/assets/projects/outside_dining/card_img_outside_dining.jpg",
         tags: ["3D"],
-        detailComponent: <div className="p-8 text-white">Outside Dining detail coming soon.</div>
+        detailComponent: <OutsideDinePage />
     },
     {
         id: 10, 
@@ -85,7 +92,7 @@ const projects = [
         description: "3D Lighting Environment",
         image: "src/assets/projects/underwater_scene/card_img_underwater_scene.jpg",
         tags: ["3D"],
-        detailComponent: <div className="p-8 text-white">Underwater Scene detail coming soon.</div>
+        detailComponent: <UnderwaterScenePage />
     },
 ]
 
