@@ -105,20 +105,14 @@ const ProjectDrawer = ({ project, onClose }) => {
     return (
         <div className="fixed inset-0 z-50 flex">
 
-            {/* Backdrop — click to close */}
-            <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-                onClick={onClose}
-            />
-
             {/* Sliding panel */}
-            <div className="relative ml-auto z-10 w-full h-full bg-background overflow-y-auto
+            <div className="relative ml-auto w-full h-full px-3 bg-background overflow-y-auto
                             animate-[drawerIn_0.35s_cubic-bezier(0.32,0.72,0,1)]">
 
                 {/* Sticky close button */}
                 <button
                     onClick={onClose}
-                    className="sticky top-0 z-20 flex items-center gap-2 w-full px-6 py-4
+                    className="container sticky top-0 z-20 flex items-center gap-2 w-full py-4
                                bg-background/90 backdrop-blur-sm border-b border-foreground/5
                                text-foreground/40 hover:text-foreground text-sm transition-colors"
                 >
