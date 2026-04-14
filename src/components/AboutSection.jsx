@@ -6,11 +6,17 @@ export const AboutSection = () => {
                 About Me
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-6"> 
-                    <h3 className="text-3xl font-semibold items-center">Hello, I'm Alana! 🌺</h3>
+            <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 items-start">
 
-                    <p className="text-muted-foreground text-lg text-left">A Computer Science student with an insatiable curiosity and 
+                <div className="flex justify-center">
+                    <img src="src/assets/Profile.jpg" alt="Alana's Profile" className="rounded-lg shadow-lg w-64 xl:w-72 h-auto object-cover object-[center_30%]" />
+                </div>
+
+
+                <div className="space-y-6 lg:pl-14 md:pl-8"> 
+                    <h3 className="text-3xl font-medium text-left">Hello, I'm Alana! 🌺</h3>
+
+                    <p className="text-muted-foreground text-lg text-left">I'm a Computer Science student with an insatiable curiosity and 
                         a passion for blending the technical with artistic. 
                     </p>
 
@@ -22,16 +28,17 @@ export const AboutSection = () => {
                         I'm always seeking new ways to bridge the gap between art and technology.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                        <a href="#contact" className="button">Contact Me</a>
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" className="px-6 py-2 bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors duration-300 text-center">
+                            Contact Me
+                        </a>
 
-                        <a href="/resume.pdf" target="_blank" className="button px-6 py-2 border border-primary rounded-full text-primary hover:bg-primary/10 transition-colors duration-300">View Resume</a>
+                        <a href="/resume.pdf" target="_blank" className="px-6 py-2 border border-primary text-primary font-medium hover:bg-primary/10 transition-colors duration-300 text-center">
+                            View Resume
+                        </a>
                     </div>
                 </div>
 
-                <div className="flex justify-center">
-                    <img src="/profile.jpg" alt="Alana's Profile" className="rounded-lg shadow-lg w-64 h-64 object-cover" />
-                </div>
             </div>
         </div>
 
