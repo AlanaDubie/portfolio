@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-import { PageTemplate } from "../pages/project_pages/PageTemplate";
 import { TropicalPlantsPage } from "../pages/project_pages/TropicalPlantsPage";
 import { AsteroidGenPage } from "../pages/project_pages/AsteroidGenPage";
 import { AsteroidSpawnerPage } from "../pages/project_pages/AsteroidSpawnerPage";
