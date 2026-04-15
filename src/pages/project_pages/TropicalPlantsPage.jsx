@@ -56,7 +56,15 @@ export const TropicalPlantsPage = () => (
                 <p>Keeping everything separated made it easier to iterate on individual parts without affecting the rest, and made both tools more manageable to control through parameters.</p>
             </div>
 
-            <video src="src/assets/projects/tropical_plants/palm_section/palm_demo.mp4" controls className="w-full rounded-md border border-foreground/5 mb-5" />
+            <div className="w-full aspect-video mb-5">
+                <iframe
+                    src="https://www.youtube.com/embed/bwpmfcf_J-U?rel=0&modestbranding=1&controls=1"
+                    title="Palm Tree Tool Demo"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded-md border border-foreground/5"
+                />
+            </div>
 
             {/* Example Designs */}
             <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Example Designs</span>
@@ -153,8 +161,16 @@ export const TropicalPlantsPage = () => (
                 <p>The main idea was giving as much control over each layer (shape, curvature, color, and rotation) so a wide range of plant types could come from the same setup.</p>
             </div>
 
-            <video src="src/assets/projects/tropical_plants/layered_plant_section/lp_demo.mp4" controls className="w-full rounded-md border border-foreground/5 mb-5" />
-
+            <div className="w-full aspect-video mb-5">
+                <iframe
+                    src="https://www.youtube.com/embed/sLKzQJxow_0?rel=0&modestbranding=1&controls=1"
+                    title="Palm Tree Tool Demo"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded-md border border-foreground/5"
+                />
+            </div>
+            
             {/* Example Designs */}
             <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Example Designs</span>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-3 mb-2">
