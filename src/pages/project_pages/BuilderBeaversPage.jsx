@@ -1,7 +1,7 @@
 export const BuilderBeaversPage = () => (
     <div className="container pt-8 mx-auto max-w-8xl text-left text-foreground overflow-x-hidden">
 
-        <img src="src/assets/projects/builder_beavers/card_img_builder_beavers.png" className="w-full lg:max-h-80 rounded-lg mb-8 object-cover" />
+        <img src="/assets/projects/builder_beavers/card_img_builder_beavers.png" className="w-full lg:max-h-80 rounded-lg mb-8 object-cover" />
 
         <span className="text-xs font-light tracking-widest uppercase text-primary/70">Coding</span>
         <h1 className="text-foreground text-6xl font-bold mt-2 mb-5">Builder Beavers</h1>
