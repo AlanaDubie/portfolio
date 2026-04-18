@@ -9,7 +9,7 @@ export const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 items-start">
 
                 <div className="flex justify-center">
-                    <img src="/assets/Profile.jpg" alt="Alana's Profile" className="rounded-lg shadow-lg w-64 xl:w-72 h-auto object-cover object-[center_30%]" />
+                    <img src="assets/Profile.jpg" alt="Alana's Profile" className="rounded-lg shadow-lg w-64 xl:w-72 h-auto object-cover object-[center_30%]" />
                 </div>
 
 

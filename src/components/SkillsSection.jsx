@@ -1,6 +1,6 @@
 
 const skills = [
-    {name: "Houdini", icon: "/assets/icons/houdini_badge_flat.svg"},
+    {name: "Houdini", icon: "assets/icons/houdini_badge_flat.svg"},
     {name: "Unity", icon: "https://skillicons.dev/icons?i=unity"},
     {name: "Unreal Engine", icon: "https://skillicons.dev/icons?i=unreal"},
     {name: "Maya", icon: "https://cdn.simpleicons.org/autodeskmaya"},

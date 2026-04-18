@@ -3,15 +3,15 @@ import MediaCarousel from "../../components/MediaCarousel";
 const heroMedia = [
   {
     type: "videoFile",
-    src: "/assets/projects/tropical_plants/palm_turnaround.mp4",
-    thumb: "/assets/projects/tropical_plants/card_img_plant_tool.png",
+    src: "assets/projects/tropical_plants/palm_turnaround.mp4",
+    thumb: "assets/projects/tropical_plants/card_img_plant_tool.png",
   },
-  { type: "image", src: "/assets/projects/tropical_plants/palm_render.png" },
+  { type: "image", src: "assets/projects/tropical_plants/palm_render.png" },
   { type: "video", src: "https://www.youtube.com/embed/bwpmfcf_J-U?rel=0&modestbranding=1" },
-  { type: "image", src: "/assets/projects/tropical_plants/palm_ex_full.png" },
-  { type: "image", src: "/assets/projects/tropical_plants/lp_render.png" },
+  { type: "image", src: "assets/projects/tropical_plants/palm_ex_full.png" },
+  { type: "image", src: "assets/projects/tropical_plants/lp_render.png" },
   { type: "video", src: "https://www.youtube.com/embed/sLKzQJxow_0?rel=0&modestbranding=1" },
-  { type: "image", src: "/assets/projects/tropical_plants/lp_ex_full.png" },
+  { type: "image", src: "assets/projects/tropical_plants/lp_ex_full.png" },
 ];
 
 const ParamTable = ({ params }) => (
@@ -102,19 +102,19 @@ const EditorialGrid = ({ images, alt = "" }) => {
 };
 
 const palmImages = [
-  "/assets/projects/tropical_plants/palm_section/palm_ex1.png",
-  "/assets/projects/tropical_plants/palm_section/palm_ex2.png",
-  "/assets/projects/tropical_plants/palm_section/palm_ex3.png",
-  "/assets/projects/tropical_plants/palm_section/palm_ex4.png",
-  "/assets/projects/tropical_plants/palm_section/palm_ex5.png",
+  "assets/projects/tropical_plants/palm_section/palm_ex1.png",
+  "assets/projects/tropical_plants/palm_section/palm_ex2.png",
+  "assets/projects/tropical_plants/palm_section/palm_ex3.png",
+  "assets/projects/tropical_plants/palm_section/palm_ex4.png",
+  "assets/projects/tropical_plants/palm_section/palm_ex5.png",
 ];
 
 const layeredImages = [
-  "/assets/projects/tropical_plants/layered_plant_section/lp_ex1.png",
-  "/assets/projects/tropical_plants/layered_plant_section/lp_ex2.png",
-  "/assets/projects/tropical_plants/layered_plant_section/lp_ex3.png",
-  "/assets/projects/tropical_plants/layered_plant_section/lp_ex4.png",
-  "/assets/projects/tropical_plants/layered_plant_section/lp_ex5.png",
+  "assets/projects/tropical_plants/layered_plant_section/lp_ex1.png",
+  "assets/projects/tropical_plants/layered_plant_section/lp_ex2.png",
+  "assets/projects/tropical_plants/layered_plant_section/lp_ex3.png",
+  "assets/projects/tropical_plants/layered_plant_section/lp_ex4.png",
+  "assets/projects/tropical_plants/layered_plant_section/lp_ex5.png",
 ];
 
 export const TropicalPlantsPage = () => (
@@ -198,7 +198,7 @@ export const TropicalPlantsPage = () => (
             </p>
           </div>
           <img
-            src="/assets/projects/tropical_plants/references.png"
+            src="assets/projects/tropical_plants/references.png"
             className="w-full rounded-md border border-foreground/5"
             alt="References"
           />
@@ -277,7 +277,7 @@ export const TropicalPlantsPage = () => (
 
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">SOP Network</span>
         <img
-          src="/assets/projects/tropical_plants/palm_section/palm_sop.png"
+          src="assets/projects/tropical_plants/palm_section/palm_sop.png"
           className="w-xl rounded-md border border-foreground/5 mt-3 mb-2"
           alt="Palm SOP network"
         />
@@ -301,7 +301,7 @@ export const TropicalPlantsPage = () => (
             ]} />
           </div>
           <img
-            src="/assets/projects/tropical_plants/palm_section/trunk_sop.png"
+            src="assets/projects/tropical_plants/palm_section/trunk_sop.png"
             className="rounded-md border border-foreground/5 w-36 shrink-0"
             alt="Trunk SOP"
           />
@@ -326,7 +326,7 @@ export const TropicalPlantsPage = () => (
             ]} />
           </div>
           <img
-            src="/assets/projects/tropical_plants/palm_section/leaves_sop.png"
+            src="assets/projects/tropical_plants/palm_section/leaves_sop.png"
             className="rounded-md border border-foreground/5 w-36 shrink-0"
             alt="Leaves SOP"
           />
@@ -345,7 +345,7 @@ export const TropicalPlantsPage = () => (
             ]} />
           </div>
           <img
-            src="/assets/projects/tropical_plants/palm_section/branch_sop.png"
+            src="assets/projects/tropical_plants/palm_section/branch_sop.png"
             className="rounded-md border border-foreground/5 w-36 shrink-0"
             alt="Branch SOP"
           />
@@ -382,7 +382,7 @@ export const TropicalPlantsPage = () => (
 
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">SOP Network</span>
         <img
-          src="/assets/projects/tropical_plants/layered_plant_section/lp_sop.png"
+          src="assets/projects/tropical_plants/layered_plant_section/lp_sop.png"
           className="w-full rounded-md border border-foreground/5 mt-3 mb-2"
           alt="Layered plant SOP network"
         />
@@ -425,7 +425,7 @@ export const TropicalPlantsPage = () => (
         ]} />
 
         <img
-          src="/assets/projects/tropical_plants/layered_plant_section/lp_leaves.png"
+          src="assets/projects/tropical_plants/layered_plant_section/lp_leaves.png"
           className="w-4xl rounded-md border border-foreground/5 mt-2 mb-10"
           alt="Leaf layer network"
         />
@@ -445,7 +445,7 @@ export const TropicalPlantsPage = () => (
           ["branch angle",   "how much the stem curves"],
         ]} />
         <img
-          src="/assets/projects/tropical_plants/layered_plant_section/lp_stem.png"
+          src="assets/projects/tropical_plants/layered_plant_section/lp_stem.png"
           className="w-xl rounded-md border border-foreground/5 mt-4 mb-10"
           alt="Stem network"
         />
@@ -476,17 +476,17 @@ export const TropicalPlantsPage = () => (
 
         <h3 className="text-lg font-semibold mb-4">Leaves Material</h3>
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Base Color — 2 variants</span>
-        <img src="/assets/projects/tropical_plants/cops_section/cops_leaves_base.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Leaves base color" />
+        <img src="assets/projects/tropical_plants/cops_section/cops_leaves_base.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Leaves base color" />
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Roughness · Normal · Opacity</span>
-        <img src="/assets/projects/tropical_plants/cops_section/cops_leaves_rno.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-10" alt="Leaves roughness normal opacity" />
+        <img src="assets/projects/tropical_plants/cops_section/cops_leaves_rno.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-10" alt="Leaves roughness normal opacity" />
 
         <h3 className="text-lg font-semibold mb-4">Trunk Material</h3>
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Base Color</span>
-        <img src="/assets/projects/tropical_plants/cops_section/cops_trunk_base.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Trunk base color" />
+        <img src="assets/projects/tropical_plants/cops_section/cops_trunk_base.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Trunk base color" />
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Roughness</span>
-        <img src="/assets/projects/tropical_plants/cops_section/cops_trunk_rough.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Trunk roughness" />
+        <img src="assets/projects/tropical_plants/cops_section/cops_trunk_rough.png" className="w-full rounded-md border border-foreground/5 mt-3 mb-6" alt="Trunk roughness" />
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">Normal</span>
-        <img src="/assets/projects/tropical_plants/cops_section/cops_trunk_normal.png" className="w-xl rounded-md border border-foreground/5 mt-3 mb-8" alt="Trunk normal" />
+        <img src="assets/projects/tropical_plants/cops_section/cops_trunk_normal.png" className="w-xl rounded-md border border-foreground/5 mt-3 mb-8" alt="Trunk normal" />
       </section>
 
     </div>
