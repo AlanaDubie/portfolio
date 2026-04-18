@@ -1,18 +1,19 @@
 import MediaCarousel from "../../components/MediaCarousel";
 
-// Hero: best renders + demo videos 
 const heroMedia = [
-  { type: "video", src: "src/assets/projects/tropical_plants/palm_turnaround.mp4" },
+  {
+    type: "videoFile",
+    src: "src/assets/projects/tropical_plants/palm_turnaround.mp4",
+    thumb: "src/assets/projects/tropical_plants/card_img_plant_tool.png",
+  },
   { type: "image", src: "src/assets/projects/tropical_plants/palm_render.png" },
   { type: "video", src: "https://www.youtube.com/embed/bwpmfcf_J-U?rel=0&modestbranding=1" },
   { type: "image", src: "src/assets/projects/tropical_plants/palm_ex_full.png" },
   { type: "image", src: "src/assets/projects/tropical_plants/lp_render.png" },
   { type: "video", src: "https://www.youtube.com/embed/sLKzQJxow_0?rel=0&modestbranding=1" },
   { type: "image", src: "src/assets/projects/tropical_plants/lp_ex_full.png" },
-
 ];
 
-// Param table  
 const ParamTable = ({ params }) => (
   <div className="border border-foreground/5 rounded-md overflow-hidden bg-card mb-4">
     {params.map(([name, desc], i) => (
@@ -29,15 +30,14 @@ const ParamTable = ({ params }) => (
   </div>
 );
 
-// Quick-jump nav  
 const JumpNav = () => (
   <nav className="flex flex-wrap gap-2 mb-10">
     {[
-      ["#results",    "Results"],
-      ["#refs",       "References"],
-      ["#palm",       "Palm Tool"],
-      ["#layered",    "Layered Plant"],
-      ["#materials",  "Materials"],
+      ["#results",   "Results"],
+      ["#refs",      "References"],
+      ["#palm",      "Palm Tool"],
+      ["#layered",   "Layered Plant"],
+      ["#materials", "Materials"],
     ].map(([href, label]) => (
       <a
         key={href}
@@ -49,6 +49,73 @@ const JumpNav = () => (
     ))}
   </nav>
 );
+
+/* ── Reusable 3-top / 2-bottom editorial grid ─────────────────────────────
+───────────────────────────────────────────────────────────────────────── */
+const EditorialGrid = ({ images, alt = "" }) => {
+  const top = images.slice(0, 3);
+  const bottom = images.slice(3, 5);
+  return (
+    <div className="flex flex-col gap-1">
+
+      {/* Top row — 3 equal 4:3 columns */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
+        {top.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`${alt} ${i + 1}`}
+            className="w-full object-cover border border-foreground/5"
+            style={{
+              aspectRatio: "4/3",
+              borderRadius: i === 0 ? "4px 0 0 0" : i === 2 ? "0 4px 0 0" : "0",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Bottom row — 2 columns, each 16:9, fills full width */}
+      {bottom.length > 0 && (
+        <div className={`grid gap-1 ${bottom.length === 1 ? "grid-cols-1" : "grid-cols-2"}`}>
+          {bottom.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt={`${alt} ${top.length + i + 1}`}
+              className="w-full object-cover object-top border border-foreground/5"
+              style={{
+                aspectRatio: "16/11",
+                borderRadius:
+                  bottom.length === 1
+                    ? "0 0 4px 4px"
+                    : i === 0
+                    ? "0 0 0 4px"
+                    : "0 0 4px 0",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+    </div>
+  );
+};
+
+const palmImages = [
+  "src/assets/projects/tropical_plants/palm_section/palm_ex1.png",
+  "src/assets/projects/tropical_plants/palm_section/palm_ex2.png",
+  "src/assets/projects/tropical_plants/palm_section/palm_ex3.png",
+  "src/assets/projects/tropical_plants/palm_section/palm_ex4.png",
+  "src/assets/projects/tropical_plants/palm_section/palm_ex5.png",
+];
+
+const layeredImages = [
+  "src/assets/projects/tropical_plants/layered_plant_section/lp_ex1.png",
+  "src/assets/projects/tropical_plants/layered_plant_section/lp_ex2.png",
+  "src/assets/projects/tropical_plants/layered_plant_section/lp_ex3.png",
+  "src/assets/projects/tropical_plants/layered_plant_section/lp_ex4.png",
+  "src/assets/projects/tropical_plants/layered_plant_section/lp_ex5.png",
+];
 
 export const TropicalPlantsPage = () => (
   <div className="mx-auto max-w-8xl text-left text-foreground overflow-x-hidden">
@@ -67,7 +134,7 @@ export const TropicalPlantsPage = () => (
       </h1>
       <p className="text-foreground/60 text-base leading-relaxed mb-3 max-w-2xl">
         Two artist-friendly procedural vegetation tools built in Houdini, inspired by the
-        stylized environments of Kingdom Hearts. The goal was to be able to generate a wide range of tropical 
+        stylized environments of Kingdom Hearts. The goal was to be able to generate a wide range of tropical
         plant variants through parameters alone, without going back to model everything from scratch.
       </p>
       <p className="text-foreground/40 text-sm mb-8">
@@ -88,41 +155,22 @@ export const TropicalPlantsPage = () => (
         </span>
         <h2 className="text-3xl font-bold mt-2 mb-4">Generated Plant Designs</h2>
         <p className="text-foreground/70 text-sm leading-relaxed mb-6 max-w-2xl">
-          All the variations below come from just the two tools with no manual modeling involved. Tweaking things like seed, bend angle, 
-          leaf count, color ramp, and layer configuration is enough to get to a completely different looking plant. 
+          All the variations below come from just the two tools with no manual modeling involved. Tweaking things like seed, bend angle,
+          leaf count, color ramp, and layer configuration is enough to get to a completely different looking plant.
           It made exploring plant designs feel fast and genuinely fun!
         </p>
 
-        <span className="text-xs font-light tracking-widest uppercase text-foreground/30 block mb-2">
+        <span className="text-xs font-light tracking-widest uppercase text-foreground/30 block mb-3">
           Palm Tree Tool
         </span>
-        {/* 3-col grid — images large enough to read, 5th wraps to second row */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-6">
-          {["palm_ex1","palm_ex2","palm_ex3","palm_ex4","palm_ex5"].map((name, i) => (
-            <img
-              key={name}
-              src={`src/assets/projects/tropical_plants/palm_section/${name}.png`}
-              className="w-full rounded-sm object-cover aspect-4/3 border border-foreground/5"
-              alt={`Palm variation ${i + 1}`}
-            />
-          ))}
-        </div>
+        <EditorialGrid images={palmImages} alt="Palm variation" />
 
-        <span className="text-xs font-light tracking-widest uppercase text-foreground/30 block mb-2">
+        <span className="text-xs font-light tracking-widest uppercase text-foreground/30 block mb-3 mt-8">
           Layered Plant Tool
         </span>
-        {/* 3-col grid — images large enough to read, 5th wraps to second row */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-2">
-          {["lp_ex1","lp_ex2","lp_ex3","lp_ex4","lp_ex5"].map((name, i) => (
-            <img
-              key={name}
-              src={`src/assets/projects/tropical_plants/layered_plant_section/${name}.png`}
-              className="w-full rounded-sm object-cover aspect-4/3 border border-foreground/5"
-              alt={`Flower variation ${i + 1}`}
-            />
-          ))}
-        </div>
-        <p className="text-xs font-light text-foreground/40 italic mt-2">
+        <EditorialGrid images={layeredImages} alt="Layered plant variation" />
+
+        <p className="text-xs font-light text-foreground/40 italic mt-3">
           Variations of scatter seed, leaf count, bend angle, color ramp, and layer configuration.
         </p>
       </section>
@@ -144,7 +192,7 @@ export const TropicalPlantsPage = () => (
               giving the environments a feel like they were painted in watercolor.
             </p>
             <p>
-              I pulled references from Destiny Islands to understand the art direction and and grounded each plant in real tropical forms (palms, banana leaves) 
+              I pulled references from Destiny Islands to understand the art direction and grounded each plant in real tropical forms (palms, banana leaves)
               to make sure the shapes stayed accurate underneath the stylization. I focused on capturing leaf shape, frond
               bends, and bark structure based on real world forms.
             </p>
@@ -217,7 +265,6 @@ export const TropicalPlantsPage = () => (
           </p>
         </div>
 
-        {/* Demo video */}
         <div className="w-full aspect-video mb-8">
           <iframe
             src="https://www.youtube.com/embed/bwpmfcf_J-U?rel=0&modestbranding=1&controls=1"
@@ -228,7 +275,6 @@ export const TropicalPlantsPage = () => (
           />
         </div>
 
-        {/* SOP Network */}
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">SOP Network</span>
         <img
           src="src/assets/projects/tropical_plants/palm_section/palm_sop.png"
@@ -239,7 +285,6 @@ export const TropicalPlantsPage = () => (
           Full network. Green = leaf shape, tan = stem, dark yellow = palm trunk. Everything merges at the bottom before output.
         </p>
 
-        {/* Trunk */}
         <h3 className="text-lg font-semibold mb-3">Trunk</h3>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-10">
           <div>
@@ -262,7 +307,6 @@ export const TropicalPlantsPage = () => (
           />
         </div>
 
-        {/* Leaves */}
         <h3 className="text-lg font-semibold mb-3">Leaves</h3>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-10">
           <div>
@@ -288,7 +332,6 @@ export const TropicalPlantsPage = () => (
           />
         </div>
 
-        {/* Branches */}
         <h3 className="text-lg font-semibold mb-3">Branches</h3>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start mb-10">
           <div>
@@ -321,13 +364,12 @@ export const TropicalPlantsPage = () => (
         <h2 className="text-3xl font-bold mt-2 mb-5">Layered Plant Procedural</h2>
         <div className="text-foreground/70 text-sm leading-relaxed mb-8 space-y-3 max-w-2xl">
           <p>
-            This one is built around multiple leaf layers and a stem, all independently controlled or toggleable. 
+            This one is built around multiple leaf layers and a stem, all independently controlled or toggleable.
             I focused on giving as much control over each leaf layer (shape,
-            curvature, color, and rotation) so a wide range of unique plant designs. 
+            curvature, color, and rotation) so a wide range of unique plant designs.
           </p>
         </div>
 
-        {/* Demo video */}
         <div className="w-full aspect-video mb-8">
           <iframe
             src="https://www.youtube.com/embed/sLKzQJxow_0?rel=0&modestbranding=1&controls=1"
@@ -338,7 +380,6 @@ export const TropicalPlantsPage = () => (
           />
         </div>
 
-        {/* SOP Network */}
         <span className="text-xs font-light tracking-widest uppercase text-foreground/40">SOP Network</span>
         <img
           src="src/assets/projects/tropical_plants/layered_plant_section/lp_sop.png"
@@ -349,7 +390,6 @@ export const TropicalPlantsPage = () => (
           Top leaves layer (left), bottom leaves layer (center), stem (right).
         </p>
 
-        {/* Leaf Layers */}
         <h3 className="text-lg font-semibold mb-3">Leaf Layers (Top and Bottom)</h3>
         <div className="text-foreground/70 text-sm leading-relaxed mb-6 space-y-2 max-w-2xl">
           <p>
@@ -390,7 +430,6 @@ export const TropicalPlantsPage = () => (
           alt="Leaf layer network"
         />
 
-        {/* Stem */}
         <h3 className="text-lg font-semibold mb-3">Stem</h3>
         <div className="text-foreground/70 text-sm leading-relaxed mb-4 space-y-2 max-w-2xl">
           <p>
