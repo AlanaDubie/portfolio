@@ -146,12 +146,12 @@ export const ProjectSection = () => {
                     Projects
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                     {projects.map((project, key) => (
                         <div
                             key={key}
                             onClick={() => setSelected(project)}
-                            className="group relative border border-0.5 border-primary/5 bg-card rounded-md overflow-hidden shadow-xs card-hover cursor-pointer"
+                            className="group relative border border-0.5 border-primary/5 bg-card rounded-sm overflow-hidden shadow-xs card-hover cursor-pointer"
                         >
                             
                             {/* Image */}
