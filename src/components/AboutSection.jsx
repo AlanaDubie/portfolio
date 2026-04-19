@@ -1,3 +1,6 @@
+import { FaDiscord, FaFileAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export const AboutSection = () => {
     return (
     <section id="about" className="py-24 px-4 relative">
@@ -11,7 +14,6 @@ export const AboutSection = () => {
                 <div className="flex justify-center">
                     <img src="assets/Profile.jpg" alt="Alana's Profile" className="rounded-lg shadow-lg w-64 xl:w-72 h-auto object-cover object-[center_30%]" />
                 </div>
-
 
                 <div className="space-y-6 lg:pl-14 md:pl-8"> 
                     <h3 className="text-3xl font-medium text-left">Hello, I'm Alana! 🌺</h3>
@@ -28,12 +30,14 @@ export const AboutSection = () => {
                         I'm always seeking new ways to bridge the gap between art and technology.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="#contact" className="px-6 py-2 bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors duration-300 text-center">
+                    <div className="flex flex-col sm:flex-row gap-8 pt-4">
+                        <a href="#contact" className="text-foreground/60 hover:text-primary transition-colors duration-300 flex items-center gap-1 font-semibold">
+                            <MdEmail size={18} />
                             Contact Me
                         </a>
 
-                        <a href="/resume.pdf" target="_blank" className="px-6 py-2 border border-primary text-primary font-medium hover:bg-primary/10 transition-colors duration-300 text-center">
+                        <a href="/resume.pdf" target="_blank" className="text-foreground/60 hover:text-primary transition-colors duration-300 flex items-center gap-1 font-semibold">
+                            <FaFileAlt size={16} />
                             View Resume
                         </a>
                     </div>
